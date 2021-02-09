@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Circle from 'components/atoms/Circle/Circle';
 import Button from 'components/atoms/Button/Button';
+import Title from 'components/atoms/Title/Title';
+import Text from 'components/atoms/Text/Text';
 import { Wrapper } from './UsersListItem.styles';
 
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
-    <div>{average}</div>
+    <Circle average={average} />
     <div>
-      <p>{name}</p>
-      <p>{attendance}</p>
+      <Title name={name} />
+      <Text attendance={attendance} />
     </div>
     <Button />
   </Wrapper>
