@@ -4,15 +4,16 @@ import Circle from 'components/atoms/Circle/Circle';
 import Button from 'components/atoms/Button/Button';
 import Title from 'components/atoms/Title/Title';
 import Text from 'components/atoms/Text/Text';
-import { Wrapper } from './UsersListItem.styles';
+import { Wrapper, StyledTextWrapper } from './UsersListItem.styles';
+// import styled from 'styled-components'
 
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <Circle average={average} />
-    <div>
+    <StyledTextWrapper>
       <Title name={name} />
       <Text attendance={attendance} />
-    </div>
+    </StyledTextWrapper>
     <Button />
   </Wrapper>
 );

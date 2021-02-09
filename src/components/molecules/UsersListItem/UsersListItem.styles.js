@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.li`
+const Wrapper = styled.li`
   display: flex;
   align-items: center;
   position: relative;
+  height: 90px;
 
   &:not(:last-child)::after {
     content: '';
@@ -14,3 +15,11 @@ export const Wrapper = styled.li`
     background-color: lightgrey;
   }
 `;
+
+const StyledTextWrapper = styled.div`
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export { Wrapper, StyledTextWrapper };
